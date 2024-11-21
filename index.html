@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Özkan Ticaret - Online Alışveriş</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Özkan Ticaret</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#urunler">Ürünler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hakkimizda">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#iletisim">İletişim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#sepetModal">
+                            <i class="fas fa-shopping-cart"></i> Sepet
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section py-5 text-center text-white">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Özkan Ticaret</h1>
+            <p class="lead mb-4">40 Yıllık Tecrübe ile Hizmetinizdeyiz</p>
+            <p class="mb-5">Kaliteli Ürünler, Uygun Fiyatlar, Profesyonel Hizmet</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#urunler" class="btn btn-primary btn-lg">Ürünleri İncele</a>
+                <a href="#iletisim" class="btn btn-outline-light btn-lg">Bize Ulaşın</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ürünler Section -->
+    <section id="urunler" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Ürünlerimiz</h2>
+            
+            <!-- Ürün Kategorileri -->
+            <ul class="nav nav-tabs mb-4 justify-content-center" id="urunTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="boya-tab" data-bs-toggle="tab" data-bs-target="#boya" type="button" role="tab">
+                        <i class="fas fa-fill-drip"></i> Boya ve Kimyasallar
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation" style="display: none;">
+                    <button class="nav-link" id="el-aletleri-tab" data-bs-toggle="tab" data-bs-target="#el-aletleri" type="button" role="tab">
+                        <i class="fas fa-wrench"></i> El Aletleri
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation" style="display: none;">
+                    <button class="nav-link" id="hirdavat-tab" data-bs-toggle="tab" data-bs-target="#hirdavat" type="button" role="tab">
+                        <i class="fas fa-screwdriver"></i> Hırdavat
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation" style="display: none;">
+                    <button class="nav-link" id="elektrik-tab" data-bs-toggle="tab" data-bs-target="#elektrik" type="button" role="tab">
+                        <i class="fas fa-bolt"></i> Elektrik Malzemeleri
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation" style="display: none;">
+                    <button class="nav-link" id="tesisat-tab" data-bs-toggle="tab" data-bs-target="#tesisat" type="button" role="tab">
+                        <i class="fas fa-faucet"></i> Tesisat
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation" style="display: none;">
+                    <button class="nav-link" id="bahce-tab" data-bs-toggle="tab" data-bs-target="#bahce" type="button" role="tab">
+                        <i class="fas fa-leaf"></i> Bahçe Aletleri
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Tab içerikleri -->
+            <div class="tab-content" id="urunTabContent">
+                <div class="tab-pane fade show active" id="boya" role="tabpanel">
+                    <div class="row" id="boyaListesi">
+                        <!-- Boya ve kimyasallar buraya gelecek -->
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="el-aletleri" role="tabpanel" style="display: none;">
+                    <div class="row" id="elAletleriListesi">
+                        <!-- El aletleri buraya gelecek -->
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="hirdavat" role="tabpanel" style="display: none;">
+                    <div class="row" id="hirdavatListesi">
+                        <!-- Hırdavat ürünleri buraya gelecek -->
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="elektrik" role="tabpanel" style="display: none;">
+                    <div class="row" id="elektrikListesi">
+                        <!-- Elektrik malzemeleri buraya gelecek -->
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tesisat" role="tabpanel" style="display: none;">
+                    <div class="row" id="tesisatListesi">
+                        <!-- Tesisat malzemeleri buraya gelecek -->
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="bahce" role="tabpanel" style="display: none;">
+                    <div class="row" id="bahceListesi">
+                        <!-- Bahçe aletleri buraya gelecek -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hakkımızda Section -->
+    <section id="hakkimizda" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Hakkımızda</h2>
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <p class="text-center">
+                        Uzun yıllardır sektörde hizmet veren firmamız, müşterilerimize en kaliteli ürünleri
+                        en uygun fiyatlarla sunmaktadır. Geniş ürün yelpazemiz ve profesyonel kadromuzla
+                        sizlere hizmet vermekten gurur duyuyoruz.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim Section -->
+    <section id="iletisim" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">İletişim</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-info mb-4">
+                        <h4>Adres Bilgilerimiz</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> Hacıhasan, Adil Onat Cd. No:21<br>
+                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;39200 Babaeski/Kırklareli</p>
+                        <p><i class="fas fa-phone"></i> (0288) 512 29 30</p>
+                        <p><i class="fas fa-mobile-alt"></i> 0532 123 45 67</p>
+                        <p><i class="fas fa-envelope"></i> info@ozkanticaret.com</p>
+                    </div>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2979.7893264557247!2d27.09519037668827!3d41.4273844713439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b4d8a4c9f68ec9%3A0x5e38c7a1a1c1b1a0!2zSGFjxLFoYXNhbiwgQWRpbCBPbmF0IENkLiBObzoyMSwgMzkyMDAgQmFiYWVza2kvS8SxcmtsYXJlbGk!5e0!3m2!1str!2str!4v1701873500000!5m2!1str!2str" 
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <form id="iletisimFormu">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Adınız Soyadınız" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="E-posta Adresiniz" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Mesajınız" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Gönder</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sepet Modal -->
+    <div class="modal fade" id="sepetModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Alışveriş Sepeti</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="sepetUrunleri">
+                        <!-- Sepet ürünleri JavaScript ile eklenecek -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                    <button type="button" class="btn btn-primary" id="siparisVer">Sipariş Ver</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Özkan Ticaret</h5>
+                    <p>Adres: Hacıhasan, Adil Onat Cd. No:21<br>
+                       39200 Babaeski/Kırklareli<br>
+                       Tel: (0288) 512 29 30<br>
+                       GSM: 0532 123 45 67<br>
+                       E-posta: info@ozkanticaret.com</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>Sosyal Medya</h5>
+                    <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>

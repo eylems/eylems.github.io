@@ -1,0 +1,232 @@
+/* Genel Stiller */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+                url('../img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(0,123,255,0.2) 0%, rgba(0,0,0,0.4) 100%);
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-section .lead {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.hero-section .btn-primary {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    background-color: #007bff;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,123,255,0.4);
+    transition: all 0.3s ease;
+}
+
+.hero-section .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,123,255,0.6);
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 80px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section .lead {
+        font-size: 1.2rem;
+    }
+}
+
+/* Ürün Kartları */
+.product-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background: #fff;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+    height: 250px;
+    object-fit: contain;
+    padding: 20px;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-card .card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+    height: 2.4em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.product-card .card-text {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.product-card .price-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.product-card .price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #007bff;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.product-card .btn {
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+.product-card .btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.product-card .btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* İletişim Bölümü Stilleri */
+.contact-info {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.contact-info h4 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.contact-info i {
+    color: #007bff;
+    margin-right: 10px;
+    width: 20px;
+}
+
+.map-container {
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/* İletişim Formu */
+#iletisimFormu {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#iletisimFormu .form-control {
+    margin-bottom: 15px;
+}
+
+#iletisimFormu button {
+    background-color: #007bff;
+    border: none;
+    padding: 12px;
+}
+
+#iletisimFormu button:hover {
+    background-color: #0056b3;
+}
+
+/* Sepet Modal */
+#sepetModal .modal-body {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.sepet-urun {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+/* Responsive Ayarlar */
+@media (max-width: 768px) {
+    .product-card img {
+        height: 150px;
+    }
+}
