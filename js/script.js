@@ -1,537 +1,13 @@
-// Ürün kategorileri ve ürünler
+// Ürün verileri
 const urunler = {
-    elAletleri: [
-        {
-            id: 'el1',
-            ad: 'Stanley Çekiç',
-            fiyat: 249.99,
-            resim: 'img/el-aletleri/cekic.jpg',
-            aciklama: 'Profesyonel çelik çekiç, ergonomik sap'
-        },
-        {
-            id: 'el2',
-            ad: 'Bosch Tornavida Seti',
-            fiyat: 399.99,
-            resim: 'img/el-aletleri/tornavida.jpg',
-            aciklama: '12 parça profesyonel tornavida seti'
-        },
-        {
-            id: 'el3',
-            ad: 'Knipex Pense',
-            fiyat: 299.99,
-            resim: 'img/el-aletleri/pense.jpg',
-            aciklama: 'Kombine pense, 180mm'
-        },
-        {
-            id: 'el4',
-            ad: 'Kerpeten',
-            fiyat: 159.99,
-            resim: 'img/el-aletleri/kerpeten.jpg',
-            aciklama: 'Profesyonel çelik kerpeten'
-        },
-        {
-            id: 'el5',
-            ad: 'Stanley Şerit Metre',
-            fiyat: 89.99,
-            resim: 'img/el-aletleri/metre.jpg',
-            aciklama: '5 metre, otomatik geri sarmalı'
-        },
-        {
-            id: 'el6',
-            ad: 'El Testeresi',
-            fiyat: 179.99,
-            resim: 'img/el-aletleri/testere.jpg',
-            aciklama: 'Ahşap kesimi için el testeresi'
-        },
-        {
-            id: 'el7',
-            ad: 'İskarpela Seti',
-            fiyat: 299.99,
-            resim: 'img/el-aletleri/iskarpela.jpg',
-            aciklama: '6 parça ahşap iskarpela seti'
-        },
-        {
-            id: 'el8',
-            ad: 'El Matkabı',
-            fiyat: 129.99,
-            resim: 'img/el-aletleri/matkap.jpg',
-            aciklama: 'Manuel el matkabı'
-        },
-        {
-            id: 'el9',
-            ad: 'Eğe Seti',
-            fiyat: 199.99,
-            resim: 'img/el-aletleri/ege.jpg',
-            aciklama: '5 parça metal eğe seti'
-        },
-        {
-            id: 'el10',
-            ad: 'Ahşap Törpü',
-            fiyat: 69.99,
-            resim: 'img/el-aletleri/torpu.jpg',
-            aciklama: 'Ahşap işleme törpüsü'
-        },
-        {
-            id: 'el11',
-            ad: 'Alyan Takımı',
-            fiyat: 149.99,
-            resim: 'img/el-aletleri/alyan.jpg',
-            aciklama: '9 parça alyan anahtarı seti'
-        },
-        {
-            id: 'el12',
-            ad: 'Lokma Takımı',
-            fiyat: 449.99,
-            resim: 'img/el-aletleri/lokma.jpg',
-            aciklama: '40 parça lokma anahtar seti'
-        },
-        {
-            id: 'el13',
-            ad: 'Kargaburun',
-            fiyat: 129.99,
-            resim: 'img/el-aletleri/kargaburun.jpg',
-            aciklama: 'Uzun ağızlı kargaburun pense'
-        },
-        {
-            id: 'el14',
-            ad: 'Yan Keski',
-            fiyat: 139.99,
-            resim: 'img/el-aletleri/yankeski.jpg',
-            aciklama: 'Profesyonel yan keski'
-        },
-        {
-            id: 'el15',
-            ad: 'Su Terazisi',
-            fiyat: 89.99,
-            resim: 'img/el-aletleri/terazi.jpg',
-            aciklama: '60cm su terazisi'
-        },
-        {
-            id: 'el16',
-            ad: 'Gönye',
-            fiyat: 79.99,
-            resim: 'img/el-aletleri/gonye.jpg',
-            aciklama: 'Metal gönye, 30cm'
-        },
-        {
-            id: 'el17',
-            ad: 'Çizecek',
-            fiyat: 29.99,
-            resim: 'img/el-aletleri/cizecek.jpg',
-            aciklama: 'Metal çizecek kalem'
-        },
-        {
-            id: 'el18',
-            ad: 'Zımba Tabancası',
-            fiyat: 159.99,
-            resim: 'img/el-aletleri/zimba.jpg',
-            aciklama: 'Manuel zımba tabancası'
-        },
-        {
-            id: 'el19',
-            ad: 'Maket Bıçağı',
-            fiyat: 39.99,
-            resim: 'img/el-aletleri/maket.jpg',
-            aciklama: 'Profesyonel maket bıçağı'
-        },
-        {
-            id: 'el20',
-            ad: 'Spatula Seti',
-            fiyat: 89.99,
-            resim: 'img/el-aletleri/spatula.jpg',
-            aciklama: '4 parça spatula seti'
-        },
-        {
-            id: 'el21',
-            ad: 'Mengene',
-            fiyat: 399.99,
-            resim: 'img/el-aletleri/mengene.jpg',
-            aciklama: '125mm tezgah mengenesi'
-        },
-        {
-            id: 'el22',
-            ad: 'İşkence',
-            fiyat: 129.99,
-            resim: 'img/el-aletleri/iskence.jpg',
-            aciklama: '60cm F tipi işkence'
-        },
-        {
-            id: 'el23',
-            ad: 'Perçin Tabancası',
-            fiyat: 199.99,
-            resim: 'img/el-aletleri/percin.jpg',
-            aciklama: 'Manuel perçin tabancası'
-        },
-        {
-            id: 'el24',
-            ad: 'Tel Fırça',
-            fiyat: 29.99,
-            resim: 'img/el-aletleri/telfirca.jpg',
-            aciklama: 'Çelik tel fırça'
-        },
-        {
-            id: 'el25',
-            ad: 'Raspa',
-            fiyat: 49.99,
-            resim: 'img/el-aletleri/raspa.jpg',
-            aciklama: 'Metal raspa, 250mm'
-        }
-    ],
-    hirdavat: [
-        {
-            id: 'h1',
-            ad: 'Civata Seti M8',
-            fiyat: 89.99,
-            resim: 'img/hirdavat/civata.jpg',
-            aciklama: '100 adet galvanizli civata'
-        },
-        {
-            id: 'h2',
-            ad: 'Dübel Seti',
-            fiyat: 45.99,
-            resim: 'img/hirdavat/dubel.jpg',
-            aciklama: 'Çok amaçlı plastik dübel seti'
-        },
-        {
-            id: 'h3',
-            ad: 'Vida Seti',
-            fiyat: 69.99,
-            resim: 'img/hirdavat/vida.jpg',
-            aciklama: '500 adet karışık vida'
-        },
-        {
-            id: 'h4',
-            ad: 'Menteşe',
-            fiyat: 29.99,
-            resim: 'img/hirdavat/mentese.jpg',
-            aciklama: 'Paslanmaz çelik menteşe'
-        },
-        {
-            id: 'h5',
-            ad: 'Kilit',
-            fiyat: 149.99,
-            resim: 'img/hirdavat/kilit.jpg',
-            aciklama: 'Silindir kapı kilidi'
-        },
-        {
-            id: 'h6',
-            ad: 'Çekmece Rayı',
-            fiyat: 79.99,
-            resim: 'img/hirdavat/ray.jpg',
-            aciklama: '45cm çekmece rayı'
-        },
-        {
-            id: 'h7',
-            ad: 'Mobilya Kulpu',
-            fiyat: 19.99,
-            resim: 'img/hirdavat/kulp.jpg',
-            aciklama: 'Modern tasarım kulp'
-        },
-        {
-            id: 'h8',
-            ad: 'Zincir',
-            fiyat: 129.99,
-            resim: 'img/hirdavat/zincir.jpg',
-            aciklama: '5 metre galvanizli zincir'
-        },
-        {
-            id: 'h9',
-            ad: 'Bağlantı Halkası',
-            fiyat: 9.99,
-            resim: 'img/hirdavat/halka.jpg',
-            aciklama: '10 adet metal halka'
-        },
-        {
-            id: 'h10',
-            ad: 'Somun Seti',
-            fiyat: 49.99,
-            resim: 'img/hirdavat/somun.jpg',
-            aciklama: '100 adet karışık somun'
-        },
-        {
-            id: 'h11',
-            ad: 'Cıvata-Somun Seti',
-            fiyat: 199.99,
-            resim: 'img/hirdavat/civata-somun.jpg',
-            aciklama: '500 parça karışık set'
-        },
-        {
-            id: 'h12',
-            ad: 'Kapı Stoperi',
-            fiyat: 39.99,
-            resim: 'img/hirdavat/stoper.jpg',
-            aciklama: 'Manyetik kapı stoperi'
-        },
-        {
-            id: 'h13',
-            ad: 'Dolap Kilidi',
-            fiyat: 59.99,
-            resim: 'img/hirdavat/dolap-kilidi.jpg',
-            aciklama: 'Çekmece ve dolap kilidi'
-        },
-        {
-            id: 'h14',
-            ad: 'Askılık',
-            fiyat: 29.99,
-            resim: 'img/hirdavat/askilik.jpg',
-            aciklama: 'Metal duvar askılığı'
-        },
-        {
-            id: 'h15',
-            ad: 'Tekerlekler',
-            fiyat: 89.99,
-            resim: 'img/hirdavat/tekerlek.jpg',
-            aciklama: '4lü mobilya tekerleği seti'
-        },
-        {
-            id: 'h16',
-            ad: 'Köşe Bağlantı',
-            fiyat: 14.99,
-            resim: 'img/hirdavat/kose.jpg',
-            aciklama: 'Metal köşe bağlantı elemanı'
-        },
-        {
-            id: 'h17',
-            ad: 'Mobilya Ayağı',
-            fiyat: 39.99,
-            resim: 'img/hirdavat/ayak.jpg',
-            aciklama: '10cm metal mobilya ayağı'
-        },
-        {
-            id: 'h18',
-            ad: 'Kapı Kolu',
-            fiyat: 129.99,
-            resim: 'img/hirdavat/kapi-kolu.jpg',
-            aciklama: 'Modern tasarım kapı kolu'
-        },
-        {
-            id: 'h19',
-            ad: 'Mandal',
-            fiyat: 19.99,
-            resim: 'img/hirdavat/mandal.jpg',
-            aciklama: '10lu metal mandal seti'
-        },
-        {
-            id: 'h20',
-            ad: 'Pul Seti',
-            fiyat: 29.99,
-            resim: 'img/hirdavat/pul.jpg',
-            aciklama: '200 adet karışık pul'
-        },
-        {
-            id: 'h21',
-            ad: 'Çektirme',
-            fiyat: 299.99,
-            resim: 'img/hirdavat/cektirme.jpg',
-            aciklama: 'Profesyonel rulman çektirme'
-        },
-        {
-            id: 'h22',
-            ad: 'Kilit Karşılığı',
-            fiyat: 24.99,
-            resim: 'img/hirdavat/kilit-karsiligi.jpg',
-            aciklama: 'Metal kilit karşılığı'
-        },
-        {
-            id: 'h23',
-            ad: 'Sürgü',
-            fiyat: 49.99,
-            resim: 'img/hirdavat/surgu.jpg',
-            aciklama: 'Metal kapı sürgüsü'
-        },
-        {
-            id: 'h24',
-            ad: 'Conta Seti',
-            fiyat: 34.99,
-            resim: 'img/hirdavat/conta.jpg',
-            aciklama: '100 adet kauçuk conta'
-        },
-        {
-            id: 'h25',
-            ad: 'Kelepçe',
-            fiyat: 19.99,
-            resim: 'img/hirdavat/kelepce.jpg',
-            aciklama: '10lu metal kelepçe seti'
-        }
-    ],
-    elektrik: [
-        {
-            id: 'e1',
-            ad: 'LED Ampul',
-            fiyat: 29.99,
-            resim: 'img/elektrik/ampul.jpg',
-            aciklama: '9W Beyaz LED Ampul'
-        },
-        {
-            id: 'e2',
-            ad: 'Priz Kasası',
-            fiyat: 12.99,
-            resim: 'img/elektrik/priz.jpg',
-            aciklama: 'Sıva altı priz kasası'
-        },
-        {
-            id: 'e3',
-            ad: 'NYM Kablo',
-            fiyat: 299.99,
-            resim: 'img/elektrik/kablo.jpg',
-            aciklama: '100 metre 3x2.5 NYM kablo'
-        },
-        {
-            id: 'e4',
-            ad: 'Anahtar',
-            fiyat: 24.99,
-            resim: 'img/elektrik/anahtar.jpg',
-            aciklama: 'Tekli elektrik anahtarı'
-        },
-        {
-            id: 'e5',
-            ad: 'Sigorta',
-            fiyat: 39.99,
-            resim: 'img/elektrik/sigorta.jpg',
-            aciklama: '16A Otomatik sigorta'
-        },
-        {
-            id: 'e6',
-            ad: 'Klemens',
-            fiyat: 9.99,
-            resim: 'img/elektrik/klemens.jpg',
-            aciklama: '12li klemens seti'
-        },
-        {
-            id: 'e7',
-            ad: 'Kablo Kanalı',
-            fiyat: 34.99,
-            resim: 'img/elektrik/kanal.jpg',
-            aciklama: '2 metre plastik kanal'
-        },
-        {
-            id: 'e8',
-            ad: 'Buat',
-            fiyat: 14.99,
-            resim: 'img/elektrik/buat.jpg',
-            aciklama: 'Sıva altı buat'
-        },
-        {
-            id: 'e9',
-            ad: 'Regülatör',
-            fiyat: 599.99,
-            resim: 'img/elektrik/regulator.jpg',
-            aciklama: '5000VA Voltaj regülatörü'
-        },
-        {
-            id: 'e10',
-            ad: 'Trafo',
-            fiyat: 149.99,
-            resim: 'img/elektrik/trafo.jpg',
-            aciklama: '220V-12V 100W trafo'
-        },
-        {
-            id: 'e11',
-            ad: 'Grup Priz',
-            fiyat: 79.99,
-            resim: 'img/elektrik/grup-priz.jpg',
-            aciklama: '6lı akım korumalı priz'
-        },
-        {
-            id: 'e12',
-            ad: 'TTR Kablo',
-            fiyat: 199.99,
-            resim: 'img/elektrik/ttr.jpg',
-            aciklama: '50 metre 3x1.5 TTR kablo'
-        },
-        {
-            id: 'e13',
-            ad: 'Spot Lamba',
-            fiyat: 44.99,
-            resim: 'img/elektrik/spot.jpg',
-            aciklama: 'LED spot lamba'
-        },
-        {
-            id: 'e14',
-            ad: 'Şalter',
-            fiyat: 129.99,
-            resim: 'img/elektrik/salter.jpg',
-            aciklama: '40A Trifaze şalter'
-        },
-        {
-            id: 'e15',
-            ad: 'İzole Bant',
-            fiyat: 9.99,
-            resim: 'img/elektrik/izole.jpg',
-            aciklama: '10 metre izole bant'
-        },
-        {
-            id: 'e16',
-            ad: 'Kaçak Akım Rölesi',
-            fiyat: 189.99,
-            resim: 'img/elektrik/role.jpg',
-            aciklama: '40A 30mA kaçak akım rölesi'
-        },
-        {
-            id: 'e17',
-            ad: 'Sensör',
-            fiyat: 89.99,
-            resim: 'img/elektrik/sensor.jpg',
-            aciklama: 'Hareket sensörü'
-        },
-        {
-            id: 'e18',
-            ad: 'Dimmer Anahtar',
-            fiyat: 69.99,
-            resim: 'img/elektrik/dimmer.jpg',
-            aciklama: 'LED uyumlu dimmer'
-        },
-        {
-            id: 'e19',
-            ad: 'Zil',
-            fiyat: 49.99,
-            resim: 'img/elektrik/zil.jpg',
-            aciklama: 'Kablosuz kapı zili'
-        },
-        {
-            id: 'e20',
-            ad: 'Kablo Pabucu',
-            fiyat: 19.99,
-            resim: 'img/elektrik/pabuc.jpg',
-            aciklama: '100lü kablo pabucu seti'
-        },
-        {
-            id: 'e21',
-            ad: 'Projektör',
-            fiyat: 249.99,
-            resim: 'img/elektrik/projektor.jpg',
-            aciklama: '50W LED projektör'
-        },
-        {
-            id: 'e22',
-            ad: 'Topraklama Çubuğu',
-            fiyat: 79.99,
-            resim: 'img/elektrik/topraklama.jpg',
-            aciklama: '1 metre bakır topraklama çubuğu'
-        },
-        {
-            id: 'e23',
-            ad: 'Kablo Makası',
-            fiyat: 159.99,
-            resim: 'img/elektrik/makas.jpg',
-            aciklama: 'Profesyonel kablo makası'
-        },
-        {
-            id: 'e24',
-            ad: 'Termostat',
-            fiyat: 119.99,
-            resim: 'img/elektrik/termostat.jpg',
-            aciklama: 'Dijital termostat'
-        },
-        {
-            id: 'e25',
-            ad: 'Akım Ölçer',
-            fiyat: 299.99,
-            resim: 'img/elektrik/amper.jpg',
-            aciklama: 'Dijital pens ampermetre'
-        }
-    ],
     boya: [
+        {
+            id: 'b1',
+            ad: 'DYO Dyoplast İç Cephe Boyası',
+            fiyat: 899.90,
+            resim: 'img/boya/ic-cephe2.jpg',
+            aciklama: '15L Beyaz Mat İç Cephe Boyası'
+        },
         {
             id: 'b2',
             ad: 'DYO Teknotex Dış Cephe Boyası',
@@ -629,227 +105,170 @@ const urunler = {
             fiyat: 79.90,
             resim: 'img/boya/mastik.jpg',
             aciklama: '310ml Akrilik Mastik'
+        }
+    ],
+    elektrik: [
+        {
+            id: "e1",
+            ad: "Priz",
+            aciklama: "Topraklı ikili priz, beyaz",
+            fiyat: 85,
+            resim: "img/elektrik/priz.jpg"
         },
         {
-            id: 'b1',
-            ad: 'DYO Dyoplast İç Cephe Boyası',
-            fiyat: 0,
-            resim: 'img/boya/ic-cephe.jpg',
-            aciklama: '15L Beyaz Mat İç Cephe Boyası'
+            id: "e2",
+            ad: "Anahtar",
+            aciklama: "Tekli anahtar, beyaz",
+            fiyat: 45,
+            resim: "img/elektrik/anahtar.jpg"
+        },
+        {
+            id: "e3",
+            ad: "Kablo",
+            aciklama: "3x2.5 NYM kablo, 100m",
+            fiyat: 1250,
+            resim: "img/elektrik/kablo.jpg"
+        },
+        {
+            id: "e4",
+            ad: "Sigorta",
+            aciklama: "Otomatik sigorta, 16A",
+            fiyat: 95,
+            resim: "img/elektrik/sigorta.jpg"
         }
     ],
     tesisat: [
         {
-            id: 't1',
-            ad: 'PPR Boru',
+            id: "t1",
+            ad: "PPR Boru",
+            aciklama: "20mm PPR su borusu, 4m",
             fiyat: 49.99,
-            resim: 'img/tesisat/ppr.jpg',
-            aciklama: '4m 20mm PPR Boru'
+            resim: "img/tesisat/ppr.jpg"
         },
         {
-            id: 't2',
-            ad: 'Musluk',
-            fiyat: 159.99,
-            resim: 'img/tesisat/musluk.jpg',
-            aciklama: 'Lavabo Bataryası'
+            id: "t2",
+            ad: "Musluk",
+            aciklama: "Banyo bataryası, krom",
+            fiyat: 899.99,
+            resim: "img/tesisat/musluk.jpg"
         },
         {
-            id: 't3',
-            ad: 'Dirsek',
-            fiyat: 9.99,
-            resim: 'img/tesisat/dirsek.jpg',
-            aciklama: '20mm PPR Dirsek'
+            id: "t3",
+            ad: "Dirsek",
+            aciklama: "20mm PPR 90° dirsek",
+            fiyat: 15.99,
+            resim: "img/tesisat/dirsek.jpg"
         },
         {
-            id: 't4',
-            ad: 'Vana',
-            fiyat: 79.99,
-            resim: 'img/tesisat/vana.jpg',
-            aciklama: '1 inch Küresel Vana'
-        },
-        {
-            id: 't5',
-            ad: 'Sifon',
-            fiyat: 39.99,
-            resim: 'img/tesisat/sifon.jpg',
-            aciklama: 'Lavabo Sifonu'
-        },
-        {
-            id: 't6',
-            ad: 'Pis Su Borusu',
+            id: "t4",
+            ad: "Vana",
+            aciklama: "20mm PPR küresel vana",
             fiyat: 89.99,
-            resim: 'img/tesisat/pissu.jpg',
-            aciklama: '3m 100mm PVC Boru'
-        },
-        {
-            id: 't7',
-            ad: 'Uzatma',
-            fiyat: 29.99,
-            resim: 'img/tesisat/uzatma.jpg',
-            aciklama: '50cm Spiral Uzatma'
-        },
-        {
-            id: 't8',
-            ad: 'Redüksiyon',
-            fiyat: 14.99,
-            resim: 'img/tesisat/reduksiyon.jpg',
-            aciklama: '25-20mm PPR Redüksiyon'
-        },
-        {
-            id: 't9',
-            ad: 'Kelepçe',
-            fiyat: 4.99,
-            resim: 'img/tesisat/kelepce.jpg',
-            aciklama: '20mm Boru Kelepçesi'
-        },
-        {
-            id: 't10',
-            ad: 'Te',
-            fiyat: 12.99,
-            resim: 'img/tesisat/te.jpg',
-            aciklama: '20mm PPR Te'
-        },
-        {
-            id: 't11',
-            ad: 'Manşon',
-            fiyat: 8.99,
-            resim: 'img/tesisat/manson.jpg',
-            aciklama: '20mm PPR Manşon'
-        },
-        {
-            id: 't12',
-            ad: 'Nipel',
-            fiyat: 19.99,
-            resim: 'img/tesisat/nipel.jpg',
-            aciklama: '1/2 inch Nipel'
-        },
-        {
-            id: 't13',
-            ad: 'Duş Başlığı',
-            fiyat: 129.99,
-            resim: 'img/tesisat/dus.jpg',
-            aciklama: 'Yağmurlama Duş Başlığı'
-        },
-        {
-            id: 't14',
-            ad: 'Rezervuar',
-            fiyat: 249.99,
-            resim: 'img/tesisat/rezervuar.jpg',
-            aciklama: 'Asma Klozet Rezervuarı'
-        },
-        {
-            id: 't15',
-            ad: 'Conta Seti',
-            fiyat: 24.99,
-            resim: 'img/tesisat/conta.jpg',
-            aciklama: '100lü Conta Seti'
+            resim: "img/tesisat/vana.jpg"
         }
     ],
     bahce: [
         {
-            id: 'bh1',
-            ad: 'Çim Biçme Makinesi',
-            fiyat: 2499.99,
-            resim: 'img/bahce/cim.jpg',
-            aciklama: 'Elektrikli Çim Biçme Makinesi'
+            id: "bh1",
+            ad: "Bahçe Hortumu",
+            aciklama: "20 metre bahçe hortumu",
+            fiyat: 279.99,
+            resim: "img/bahce/hortum.jpg"
         },
         {
-            id: 'bh2',
-            ad: 'Bahçe Hortumu',
-            fiyat: 149.99,
-            resim: 'img/bahce/hortum.jpg',
-            aciklama: '30m Spiral Hortum'
+            id: "bh2",
+            ad: "Çim Makası",
+            aciklama: "Profesyonel çim makası",
+            fiyat: 179.99,
+            resim: "img/bahce/makas.jpg"
         },
         {
-            id: 'bh3',
-            ad: 'Budama Makası',
-            fiyat: 89.99,
-            resim: 'img/bahce/budama.jpg',
-            aciklama: 'Profesyonel Budama Makası'
-        },
-        {
-            id: 'bh4',
-            ad: 'Kürek',
-            fiyat: 79.99,
-            resim: 'img/bahce/kurek.jpg',
-            aciklama: 'Saplı Bahçe Küreği'
-        },
-        {
-            id: 'bh5',
-            ad: 'Tırmık',
-            fiyat: 69.99,
-            resim: 'img/bahce/tirmik.jpg',
-            aciklama: 'Metal Bahçe Tırmığı'
-        },
-        {
-            id: 'bh6',
-            ad: 'Çapa',
-            fiyat: 59.99,
-            resim: 'img/bahce/capa.jpg',
-            aciklama: 'El Çapası'
-        },
-        {
-            id: 'bh7',
-            ad: 'Sulama Tabancası',
-            fiyat: 44.99,
-            resim: 'img/bahce/tabanca.jpg',
-            aciklama: 'Ayarlanabilir Sulama Tabancası'
-        },
-        {
-            id: 'bh8',
-            ad: 'Çit Makası',
-            fiyat: 199.99,
-            resim: 'img/bahce/cit.jpg',
-            aciklama: 'Elektrikli Çit Budama Makası'
-        },
-        {
-            id: 'bh9',
-            ad: 'Saksı',
-            fiyat: 29.99,
-            resim: 'img/bahce/saksi.jpg',
-            aciklama: '5L Plastik Saksı'
-        },
-        {
-            id: 'bh10',
-            ad: 'Fıskiye',
-            fiyat: 34.99,
-            resim: 'img/bahce/fiskiye.jpg',
-            aciklama: '360° Döner Fıskiye'
-        },
-        {
-            id: 'bh11',
-            ad: 'Çim Tohumu',
+            id: "bh3",
+            ad: "Tırmık",
+            aciklama: "Bahçe tırmığı, ahşap saplı",
             fiyat: 119.99,
-            resim: 'img/bahce/tohum.jpg',
-            aciklama: '1kg Çim Tohumu'
+            resim: "img/bahce/tirmik.jpg"
         },
         {
-            id: 'bh12',
-            ad: 'Gübre',
+            id: "bh4",
+            ad: "Kürek",
+            aciklama: "Bahçe küreği, metal",
+            fiyat: 149.99,
+            resim: "img/bahce/kurek.jpg"
+        }
+    ],
+    hirdavat: [
+        {
+            id: "h1",
+            ad: "Tornavida Seti",
+            aciklama: "6 parça tornavida seti",
+            fiyat: 199.99,
+            resim: "img/hirdavat/tornavida.jpg"
+        },
+        {
+            id: "h2",
+            ad: "Çekiç",
+            aciklama: "450gr çekiç, ahşap saplı",
             fiyat: 89.99,
-            resim: 'img/bahce/gubre.jpg',
-            aciklama: '5kg Organik Gübre'
+            resim: "img/hirdavat/cekic.jpg"
         },
         {
-            id: 'bh13',
-            ad: 'Eldiven',
-            fiyat: 24.99,
-            resim: 'img/bahce/eldiven.jpg',
-            aciklama: 'Bahçe Eldiveni'
+            id: "h3",
+            ad: "Matkap",
+            aciklama: "Darbeli matkap, 650W",
+            fiyat: 699.99,
+            resim: "img/hirdavat/matkap.jpg"
         },
         {
-            id: 'bh14',
-            ad: 'Testere',
-            fiyat: 79.99,
-            resim: 'img/bahce/testere.jpg',
-            aciklama: 'Dal Budama Testeresi'
+            id: "h4",
+            ad: "Pense",
+            aciklama: "180mm kombine pense",
+            fiyat: 129.99,
+            resim: "img/hirdavat/pense.jpg"
+        }
+    ],
+    yapi: [
+        {
+            id: "y1",
+            ad: "Çimento",
+            aciklama: "Portland çimento, 42.5R, 50kg",
+            fiyat: 159.99,
+            resim: "img/yapi/cimento.jpg"
         },
         {
-            id: 'bh15',
-            ad: 'Çim Çiti',
-            fiyat: 49.99,
-            resim: 'img/bahce/cit-cerceve.jpg',
-            aciklama: '3m Plastik Çim Çiti'
+            id: "y2",
+            ad: "Tuğla",
+            aciklama: "13.5'luk tuğla",
+            fiyat: 12.99,
+            resim: "img/yapi/tugla.jpg"
+        },
+        {
+            id: "y3",
+            ad: "Kum",
+            aciklama: "İnce dere kumu, 1 ton",
+            fiyat: 399.99,
+            resim: "img/yapi/kum.jpg"
+        },
+        {
+            id: "y4",
+            ad: "Demir",
+            aciklama: "8'lik inşaat demiri, 12m",
+            fiyat: 179.99,
+            resim: "img/yapi/demir.jpg"
+        },
+        {
+            id: "y5",
+            ad: "Sıva",
+            aciklama: "Hazır kaba sıva, 40kg",
+            fiyat: 89.99,
+            resim: "img/yapi/siva.jpg"
+        },
+        {
+            id: "y6",
+            ad: "Alçı",
+            aciklama: "Saten perdah alçısı, 30kg",
+            fiyat: 129.99,
+            resim: "img/yapi/alci.jpg"
         }
     ]
 };
@@ -858,9 +277,24 @@ const urunler = {
 let sepet = [];
 
 // Sayfa yüklendiğinde çalışacak fonksiyonlar
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     tumUrunleriGoster();
     sepetGuncelle();
+
+    // Tesisat sekmesi için arka plan kontrolü
+    const allTabs = document.querySelectorAll('[data-bs-toggle="tab"]');
+
+    // Tüm sekmelere tıklama olayı ekle
+    allTabs.forEach(tab => {
+        tab.addEventListener('shown.bs.tab', function(event) {
+            // Önceki aktif sekme class'ını kaldır
+            document.body.removeAttribute('data-active-tab');
+            
+            // Yeni sekmenin id'sini al (örn: "tesisat-tab" -> "tesisat")
+            const activeTabId = event.target.id.replace('-tab', '');
+            document.body.setAttribute('data-active-tab', activeTabId);
+        });
+    });
 });
 
 // Tüm ürünleri kategorilere göre gösteren fonksiyon
@@ -877,22 +311,22 @@ function tumUrunleriGoster() {
     });
 }
 
-// Ürün kartı HTML'i oluşturan fonksiyon
-function createProductCard(product) {
-    const price = product.fiyat === 0 ? '' : `${product.fiyat.toLocaleString('tr-TR')} ₺`;
-    if (price === '') return '';
-    
+// Ürün kartı oluşturan fonksiyon
+function createProductCard(urun) {
     return `
-        <div class="col-md-4 col-lg-3 mb-4">
-            <div class="product-card">
-                <img src="${product.resim}" alt="${product.ad}" class="card-img-top">
+        <div class="col-6 col-md-3">
+            <div class="card product-card">
+                <img src="${urun.resim}" class="card-img-top" alt="${urun.ad}">
                 <div class="card-body">
-                    <h5 class="card-title">${product.ad}</h5>
-                    <p class="card-text">${product.aciklama || ''}</p>
+                    <h5 class="card-title">${urun.ad}</h5>
+                    <p class="card-text">${urun.aciklama}</p>
                     <div class="price-action">
-                        <div class="price">${price}</div>
-                        <button class="btn btn-primary" onclick="sepeteEkle('${product.id}')">
-                            Sepete Ekle
+                        <span class="price">${urun.fiyat.toFixed(2)} ₺</span>
+                        <button class="btn btn-primary btn-sm sepete-ekle" 
+                                data-urun-id="${urun.id}" 
+                                data-urun-ad="${urun.ad}" 
+                                data-urun-fiyat="${urun.fiyat}">
+                            <i class="fas fa-cart-plus"></i>
                         </button>
                     </div>
                 </div>
@@ -965,6 +399,45 @@ function sepetGuncelle() {
     }
 }
 
+// Ürünleri sayfaya render eden fonksiyon
+function renderProducts() {
+    // Boya ve Kimyasallar
+    const boyaListesi = document.getElementById('boyaListesi');
+    if (boyaListesi) {
+        boyaListesi.innerHTML = urunler.boya.map(urun => createProductCard(urun)).join('');
+    }
+
+    // Hırdavat
+    const hirdavatListesi = document.getElementById('hirdavatListesi');
+    if (hirdavatListesi) {
+        hirdavatListesi.innerHTML = urunler.hirdavat.map(urun => createProductCard(urun)).join('');
+    }
+
+    // Elektrik
+    const elektrikListesi = document.getElementById('elektrikListesi');
+    if (elektrikListesi) {
+        elektrikListesi.innerHTML = urunler.elektrik.map(urun => createProductCard(urun)).join('');
+    }
+
+    // Tesisat
+    const tesisatListesi = document.getElementById('tesisatListesi');
+    if (tesisatListesi) {
+        tesisatListesi.innerHTML = urunler.tesisat.map(urun => createProductCard(urun)).join('');
+    }
+
+    // Bahçe
+    const bahceListesi = document.getElementById('bahceListesi');
+    if (bahceListesi) {
+        bahceListesi.innerHTML = urunler.bahce.map(urun => createProductCard(urun)).join('');
+    }
+
+    // Yapı
+    const yapiListesi = document.getElementById('yapiListesi');
+    if (yapiListesi) {
+        yapiListesi.innerHTML = urunler.yapi.map(urun => createProductCard(urun)).join('');
+    }
+}
+
 // Sipariş verme fonksiyonu
 document.getElementById('siparisVer').addEventListener('click', () => {
     if (sepet.length === 0) {
@@ -987,4 +460,14 @@ document.getElementById('iletisimFormu').addEventListener('submit', (e) => {
     e.preventDefault();
     alert('Mesajınız alındı! En kısa sürede size dönüş yapacağız.');
     e.target.reset();
+});
+
+// Scroll efekti için navbar kontrolü
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
 });

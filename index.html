@@ -13,19 +13,32 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Özkan Ticaret</a>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/logo.png.png" alt="Özkan Ticaret Logo" class="navbar-logo">
+                <span class="ms-3">Özkan Ticaret</span>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Ana Sayfa</a>
+                        <a class="nav-link active" href="index.html">Ana Sayfa</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#urunler">Ürünler</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="urunler.html" role="button" data-bs-toggle="dropdown">
+                            Ürünler
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="urunler.html#boya">Boya ve Kimyasallar</a></li>
+                            <li><a class="dropdown-item" href="urunler.html#el-aletleri">El Aletleri</a></li>
+                            <li><a class="dropdown-item" href="urunler.html#hirdavat">Hırdavat</a></li>
+                            <li><a class="dropdown-item" href="urunler.html#elektrik">Elektrik</a></li>
+                            <li><a class="dropdown-item" href="urunler.html#tesisat">Tesisat</a></li>
+                            <li><a class="dropdown-item" href="urunler.html#bahce">Bahçe</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#hakkimizda">Hakkımızda</a>
@@ -44,87 +57,92 @@
     </nav>
 
     <!-- Hero Section -->
-    <div class="hero-section py-5 text-center text-white">
-        <div class="container">
-            <h1 class="display-4 fw-bold">Özkan Ticaret</h1>
-            <p class="lead mb-4">40 Yıllık Tecrübe ile Hizmetinizdeyiz</p>
-            <p class="mb-5">Kaliteli Ürünler, Uygun Fiyatlar, Profesyonel Hizmet</p>
-            <div class="d-flex justify-content-center gap-3">
-                <a href="#urunler" class="btn btn-primary btn-lg">Ürünleri İncele</a>
-                <a href="#iletisim" class="btn btn-outline-light btn-lg">Bize Ulaşın</a>
+    <div class="hero-section">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
             </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="hero-content">
+                        <h1 class="display-4 fw-bold animate__animated animate__fadeInDown">Özkan Ticaret</h1>
+                        <p class="lead mb-4 animate__animated animate__fadeInUp">40 Yıllık Tecrübe ile Hizmetinizdeyiz</p>
+                        <p class="mb-5 animate__animated animate__fadeInUp">Kaliteli Ürünler, Uygun Fiyatlar, Profesyonel Hizmet</p>
+                        <div class="d-flex justify-content-center gap-3 animate__animated animate__fadeInUp">
+                            <a href="urunler.html" class="btn btn-primary btn-lg">Ürünleri İncele</a>
+                            <a href="#iletisim" class="btn btn-outline-light btn-lg">Bize Ulaşın</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-content">
+                        <h2 class="display-4 fw-bold animate__animated animate__fadeInDown">Boya ve Kimyasallar</h2>
+                        <p class="lead mb-4 animate__animated animate__fadeInUp">En Kaliteli Markalar</p>
+                        <p class="mb-5 animate__animated animate__fadeInUp">DYO, Marshall, Permolit ve daha fazlası...</p>
+                        <div class="d-flex justify-content-center gap-3 animate__animated animate__fadeInUp">
+                            <a href="urunler.html#boya" class="btn btn-primary btn-lg">Boya Ürünlerini İncele</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-content">
+                        <h2 class="display-4 fw-bold animate__animated animate__fadeInDown">Profesyonel Destek</h2>
+                        <p class="lead mb-4 animate__animated animate__fadeInUp">Uzman Kadromuzla Yanınızdayız</p>
+                        <p class="mb-5 animate__animated animate__fadeInUp">Ürün seçimi ve uygulama konusunda destek alın</p>
+                        <div class="d-flex justify-content-center gap-3 animate__animated animate__fadeInUp">
+                            <a href="#iletisim" class="btn btn-primary btn-lg">Bize Danışın</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Önceki</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Sonraki</span>
+            </button>
         </div>
     </div>
 
-    <!-- Ürünler Section -->
-    <section id="urunler" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Ürünlerimiz</h2>
-            
-            <!-- Ürün Kategorileri -->
-            <ul class="nav nav-tabs mb-4 justify-content-center" id="urunTabs" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="boya-tab" data-bs-toggle="tab" data-bs-target="#boya" type="button" role="tab">
-                        <i class="fas fa-fill-drip"></i> Boya ve Kimyasallar
-                    </button>
-                </li>
-                <li class="nav-item" role="presentation" style="display: none;">
-                    <button class="nav-link" id="el-aletleri-tab" data-bs-toggle="tab" data-bs-target="#el-aletleri" type="button" role="tab">
-                        <i class="fas fa-wrench"></i> El Aletleri
-                    </button>
-                </li>
-                <li class="nav-item" role="presentation" style="display: none;">
-                    <button class="nav-link" id="hirdavat-tab" data-bs-toggle="tab" data-bs-target="#hirdavat" type="button" role="tab">
-                        <i class="fas fa-screwdriver"></i> Hırdavat
-                    </button>
-                </li>
-                <li class="nav-item" role="presentation" style="display: none;">
-                    <button class="nav-link" id="elektrik-tab" data-bs-toggle="tab" data-bs-target="#elektrik" type="button" role="tab">
-                        <i class="fas fa-bolt"></i> Elektrik Malzemeleri
-                    </button>
-                </li>
-                <li class="nav-item" role="presentation" style="display: none;">
-                    <button class="nav-link" id="tesisat-tab" data-bs-toggle="tab" data-bs-target="#tesisat" type="button" role="tab">
-                        <i class="fas fa-faucet"></i> Tesisat
-                    </button>
-                </li>
-                <li class="nav-item" role="presentation" style="display: none;">
-                    <button class="nav-link" id="bahce-tab" data-bs-toggle="tab" data-bs-target="#bahce" type="button" role="tab">
-                        <i class="fas fa-leaf"></i> Bahçe Aletleri
-                    </button>
-                </li>
-            </ul>
-
-            <!-- Tab içerikleri -->
-            <div class="tab-content" id="urunTabContent">
-                <div class="tab-pane fade show active" id="boya" role="tabpanel">
-                    <div class="row" id="boyaListesi">
-                        <!-- Boya ve kimyasallar buraya gelecek -->
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="el-aletleri" role="tabpanel" style="display: none;">
-                    <div class="row" id="elAletleriListesi">
-                        <!-- El aletleri buraya gelecek -->
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="hirdavat" role="tabpanel" style="display: none;">
-                    <div class="row" id="hirdavatListesi">
-                        <!-- Hırdavat ürünleri buraya gelecek -->
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="elektrik" role="tabpanel" style="display: none;">
-                    <div class="row" id="elektrikListesi">
-                        <!-- Elektrik malzemeleri buraya gelecek -->
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="tesisat" role="tabpanel" style="display: none;">
-                    <div class="row" id="tesisatListesi">
-                        <!-- Tesisat malzemeleri buraya gelecek -->
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="bahce" role="tabpanel" style="display: none;">
-                    <div class="row" id="bahceListesi">
-                        <!-- Bahçe aletleri buraya gelecek -->
+    <!-- Ürünlerimiz Bölümü -->
+    <section class="products-section py-5">
+        <div class="container text-center">
+            <h2 class="section-title mb-4">Ürünlerimiz</h2>
+            <p class="section-description mb-5">
+                Geniş ürün yelpazemizle tüm yapı market ihtiyaçlarınızı karşılıyoruz. 
+                Kaliteli ve uygun fiyatlı ürünlerimizi inceleyin.
+            </p>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="categories-grid">
+                        <a href="urunler.html#boya" class="category-item">
+                            <i class="fas fa-fill-drip"></i>
+                            <h3>Boya ve Kimyasallar</h3>
+                        </a>
+                        <a href="urunler.html#el-aletleri" class="category-item">
+                            <i class="fas fa-wrench"></i>
+                            <h3>El Aletleri</h3>
+                        </a>
+                        <a href="urunler.html#hirdavat" class="category-item">
+                            <i class="fas fa-screwdriver"></i>
+                            <h3>Hırdavat</h3>
+                        </a>
+                        <a href="urunler.html#elektrik" class="category-item">
+                            <i class="fas fa-bolt"></i>
+                            <h3>Elektrik</h3>
+                        </a>
+                        <a href="urunler.html#tesisat" class="category-item">
+                            <i class="fas fa-faucet"></i>
+                            <h3>Tesisat</h3>
+                        </a>
+                        <a href="urunler.html#bahce" class="category-item">
+                            <i class="fas fa-leaf"></i>
+                            <h3>Bahçe</h3>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -229,7 +247,20 @@
     </footer>
 
     <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Initialize Carousel -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var myCarousel = new bootstrap.Carousel(document.getElementById('heroCarousel'), {
+                interval: 5000,
+                wrap: true,
+                keyboard: true
+            });
+        });
+    </script>
+
     <!-- Custom JS -->
     <script src="js/script.js"></script>
 </body>
